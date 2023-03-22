@@ -16,6 +16,7 @@ export default function BasicFilterDemo() {
 
     const [customers, setCustomers] = useState(null);
     const [showStatus, setShowStatus] = useState(false);
+    const [sortData, setSortData] = useState();
    
     const [filters, setFilters] = useState({
         global: { value: null, matchMode: FilterMatchMode.CONTAINS },
@@ -97,21 +98,17 @@ export default function BasicFilterDemo() {
         }]);
     }
 
-    const toggleStatus = () => {
-        
-        
-    }
-
     return (
         <div className="card">
-            <DataTable value={customers} paginator rows={10} dataKey="id" filters={filters} filterDisplay="row" loading={loading}
+            { sortData ? <p> Sorted Acc to: {sortData.sortField} {sortData.sortOrder == 1 ? 'ASC' : 'DESC'}</p> : null }
+            <DataTable sortField={sortData?.sortField} sortOrder={sortData?.sortOrder} onSort={(event) => { setSortData({sortField: event.sortField, sortOrder: event.sortOrder })}} value={customers} paginator rows={10} dataKey="id" filters={filters} filterDisplay="row" loading={loading}
                   emptyMessage="No customers found.">
-                <Column field="firstName" header="FirstName" filter filterPlaceholder="Search by name" style={{ minWidth: '12rem' }} />
-                <Column field="lastName" header="LastName" filter filterField='lastName' filterPlaceholder="Lastname" style={{ minWidth: '12rem' }} />
-                <Column header="Address" field="currentAddress" filterField="currentAddress" style={{ minWidth: '12rem' }}  filter filterPlaceholder="Search by currentAddress" />
-                <Column header="Phone Number" filterField="phoneNumber" style={{ minWidth: '12rem' }}  filter filterPlaceholder="Search by phoneNumber" />
-                <Column header="Email" filterField="mailingAddress" style={{ minWidth: '12rem' }} body={mailingAddressTemplate} filter filterPlaceholder="Search by mailingAddress" />
-                { showStatus ? <Column header="Status" field="status" filter filterField="status"  body={statusCellTemplate} /> : null }
+                <Column field="firstName" header="FirstName" filter filterPlaceholder="Search by name" sortable style={{ minWidth: '12rem' }} />
+                <Column field="lastName" header="LastName" filter filterField='lastName' sortable filterPlaceholder="Lastname" style={{ minWidth: '12rem' }} />
+                <Column header="Address" field="currentAddress" filterField="currentAddress" sortable style={{ minWidth: '12rem' }}  filter filterPlaceholder="Search by currentAddress" />
+                <Column header="Phone Number" field="phoneNumber" filterField="phoneNumber" sortable style={{ minWidth: '12rem' }}  filter filterPlaceholder="Search by phoneNumber" />
+                <Column header="Email" field="mailingAddress" filterField="mailingAddress" style={{ minWidth: '12rem' }} sortable filter filterPlaceholder="Search by mailingAddress" />
+                { showStatus ? <Column header="Status" field="status" filter filterField="status" sortable  body={statusCellTemplate} /> : null }
                 
             </DataTable>
             <button onClick={() => addRow()}>Add Row</button>
