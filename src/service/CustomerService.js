@@ -20,7 +20,8 @@ export function getCustomersMedium() {
             "name": "Ioni Bowcher",
             "image": "ionibowcher.png"
         },
-        "balance": 70663
+        "balance": 70663,
+        "actions": []
     }, {
         "id": 1001,
         "firstName": "Josephine ",
@@ -43,7 +44,8 @@ export function getCustomersMedium() {
             "name": "Amy Elsner",
             "image": "amyelsner.png"
         },
-        "balance": 82429
+        "balance": 82429,
+        "actions": []
     }, {
         "id": 1002,
         "firstName": "Art ",
@@ -67,6 +69,7 @@ export function getCustomersMedium() {
             "name": "Asiya Javayant",
             "image": "asiyajavayant.png"
         },
-        "balance": 28334
+        "balance": 28334,
+        "actions": []
     }])
 }
