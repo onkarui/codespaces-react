@@ -1,25 +1,19 @@
 export function getCustomersMedium() {
     return Promise.resolve([{
         "id": 1000,
-        "firstName": "James Butt",
-        "lastName":"",
+        "firstName": "James",
+        "lastName":"Butt",
         "country": {
             "name": "Algeria",
             "code": "dz"
         },
-        "phoneNumber":"123456789",
-        "mailingAddress":"@gmail",
+        "phoneNumber":"9871235467",
+        "mailingAddress":"test1@gmail",
         "policyNumber":"3",
         "subscribeId":"IJHBVBNM",
         "currentAddress": "Benton, John B Jr",
         "date": "2015-09-13T00:00:00.000Z",
         "status": "unqualified",
-        "doNotEmail":"Y",
-        "doNotEmailCode":"",
-        "doNotCall":"N",
-        "doNotCallCode":"",
-        "doNotMail":"",
-        "doNotMailCode":"",
         "verified": true,
         "activity": 17,
         "representative": {
@@ -29,27 +23,22 @@ export function getCustomersMedium() {
         "balance": 70663
     }, {
         "id": 1001,
-        "firstName": "Josephine Darakjy",
-        "lastName":"",
+        "firstName": "Josephine ",
+        "lastName":"Darakjy",
         "country": {
             "name": "Egypt",
             "code": "eg"
         },
-        "phoneNumber":"123456789",
+        "phoneNumber":"6578674653",
         "company": "Chanay, Jeffrey A Esq",
         "policyNumber":"2",
-        "doNotEmail":"Y",
-        "doNotEmailCode":"",
-        "doNotCall":"N",
-        "doNotCallCode":"",
-        "doNotMail":"",
-        "doNotMailCode":"",
         "subscribeId":"IJHBVBNM",
+        "currentAddress": "Manhattan, NY",
         "date": "2019-02-09T00:00:00.000Z",
         "status": "proposal",
         "verified": true,
         "activity": 0,
-        "mailingAddress":"@gmail",
+        "mailingAddress":"test3@gmail.com",
         "representative": {
             "name": "Amy Elsner",
             "image": "amyelsner.png"
@@ -57,23 +46,19 @@ export function getCustomersMedium() {
         "balance": 82429
     }, {
         "id": 1002,
-        "firstName": "Art Venere",
+        "firstName": "Art ",
+        "lastName": "Venere",
         "country": {
             "name": "Panama",
             "code": "pa"
         },
         "phoneNumber":"123456789",
         "lastName":"abc",
-        "mailingAddress":"@gmail",
+        "mailingAddress":"check@gmail.com",
         "subscribeId":"IJHBVBNM",
+        "currentAddress": "Austin, Texas",
         "policyNumber":"2",
         "company": "Chemel, James L Cpa",
-        "doNotEmail":"Y",
-        "doNotEmailCode":"",
-        "doNotCall":"N",
-        "doNotCallCode":"",
-        "doNotMail":"",
-        "doNotMailCode":"",
         "date": "2017-05-13T00:00:00.000Z",
         "status": "qualified",
         "verified": false,
